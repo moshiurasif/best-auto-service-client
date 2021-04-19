@@ -1,0 +1,14 @@
+.navbar-style{
+    font-family: 'Ubuntu',
+    sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.nav-link {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+    color: #fff;
+}
+.nav-link:hover{
+    color:navy;
+}

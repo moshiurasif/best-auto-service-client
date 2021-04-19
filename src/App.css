@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+h1,h2,h3,h4,h5,h6{
+     font-family: 'Barlow Condensed',
+     sans-serif;
+}
+p{
+    font-family: 'Ubuntu',
+    sans-serif;
+}
+/* media query */
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .home-bg {
+        height: 400px !important;
+    }
+    .content-style {
+        text-align: center;
+        padding: 40px 0 !important;
+    }
+    .header-text-style h1 {
+        font-size: 3rem !important;
+    }
+    .header-text-style p{
+        padding: 0 20px;
+    }
+    .appointment-form {
+        width: 100% !important;
+        margin-top: 80px !important;
+    }
+    .service-style {
+        padding: 20px !important;
+        margin-bottom: 5px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .icon-style {
+            margin-left: 10px !important;
+            padding-left: 0px !important;
+    }
+    .review-style {
+        margin-bottom: 20px;
+    }
+    .best-car-solution {
+        text-align: center;
+    }
+    .team-member-card {
+        width:100% !important;
+        margin-bottom: 20px;
+        
+    }
+    .experience {
+        text-align: center;
+    }
+    .accordian{
+        margin-top:20px !important;
+    }
+    .heading-text{
+        margin-bottom: 20px !important;
+    }
+    .mobile-font-size{
+        font-size: 2rem !important;
+    }
+    footer{
+        text-align: center;
+    }
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}

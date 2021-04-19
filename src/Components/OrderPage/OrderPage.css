@@ -1,0 +1,14 @@
+.side-bar{
+    background: linear-gradient(rgba(84, 160, 255, 0.8), rgba(1, 163, 164, 0.8));
+    height: 100vh;
+}
+.side-bar ul li{
+    padding:20px;
+    border-bottom: 1px solid #fff;
+}
+.side-bar ul li a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 18px;
+    text-transform: uppercase;
+}
