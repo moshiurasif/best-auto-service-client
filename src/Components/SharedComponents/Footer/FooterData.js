@@ -3,7 +3,7 @@ import "./Footer.css";
 
 const FooterData = ({fdata}) => {
     return (
-      <div className="col-md-3 col-6">
+      <div className="col-md-3 col-6 mobile-view">
         <h3>{fdata.heading}</h3>
         <h6>{fdata.list1}</h6>
         <h6>{fdata.list2}</h6>

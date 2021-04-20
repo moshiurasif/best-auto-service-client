@@ -28,6 +28,7 @@ const Header = () => {
                   className="form-control"
                   type="text"
                   placeholder="Your Full Name"
+                  email="name"
                 />
                 <br />
 
@@ -35,6 +36,7 @@ const Header = () => {
                   className="form-control"
                   type="email"
                   placeholder="Email Address"
+                  name="email"
                 />
 
                 <br />
@@ -43,6 +45,7 @@ const Header = () => {
                   className="form-control"
                   type="text"
                   placeholder="Phone Number"
+                  name="phoneNumber"
                 />
 
                 <br />
@@ -53,7 +56,7 @@ const Header = () => {
                   <option value="Othres">Othres</option>
                 </select>
               </p>
-              <div class="form_btn">
+              <div className="form_btn">
                 <input type="submit" value="Make Appointment" />
               </div>
             </form>

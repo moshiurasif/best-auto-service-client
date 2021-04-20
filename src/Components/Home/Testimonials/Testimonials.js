@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Review from './Review/Review';
 import "./Testimonials.css";
 
@@ -29,6 +29,14 @@ const testimonialsData = [
 ];
 
 const Testimonials = () => {
+  const [testimonials, setTestimonials] = useState([])
+
+    useEffect( () => {
+        fetch('http://localhost:8000/reviews')
+        .then(res => res.json())
+        .then(data => setTestimonials(data))
+    }, [])
+ 
     
     return (
       <section className="testimonial-section mb-5 pt-5 pb-5 pt-5">
@@ -45,8 +53,8 @@ const Testimonials = () => {
             >
               Our Happy Customers
             </h1>
-            {testimonialsData.map((review) => (
-              <Review review={review}></Review>
+            {testimonials.map((review) => (
+              <Review review={review} key={review._id}></Review>
             ))}
           </div>
         </div>

@@ -1,18 +1,43 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Service.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useHistory } from 'react-router';
 
 const Service = ({serve}) => {
+  const [order, setOrder]= useState({});
+  const history = useHistory();
+
+  const handleOrder = () => {
+    history.push(`/book/${serve._id}`);
+  };
+  // useEffect(()=>{
+  //   fetch("http://localhost:8000/addOrder", {
+  //     method: "Post",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(order)
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => console.log(data));
+
+  // },[])
+  console.log(serve);
+
+  
   
     return (
       <div className="col-md-6 col-12">
         <div className="service-style">
           <div className="icon-style">
             <FontAwesomeIcon icon={serve.icon} />
+            <img src={`http://localhost:8000/${serve.image.img}`} alt="" />
           </div>
           <div className="service-content">
             <h3>{serve.serviceName}</h3>
             <p>{serve.description}</p>
+            <h3>$ {serve.price}</h3>
+            <button onClick={handleOrder} className="btn-style">
+              Order
+            </button>
           </div>
         </div>
       </div>

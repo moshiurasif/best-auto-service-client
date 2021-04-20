@@ -64,6 +64,16 @@ p{
     footer{
         text-align: center;
     }
+    .mobile-view{
+        margin-bottom: 20px;
+    }
+    .navbar-toggler {
+        background-color: white !important;
+        border: 1px solid red !important;
+    }
+    .navbar-style {
+        text-align: center;
+    }
 }
 
 /* Small devices (landscape phones, 576px and up) */
