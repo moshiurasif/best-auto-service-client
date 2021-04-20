@@ -8,7 +8,7 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/home">
-            <img className="img-fluid w-50" src={logo} alt="Gerez"/>
+            <img className="img-fluid w-50" src={logo} alt="Gerez" />
           </Link>
           <button
             className="navbar-toggler"
@@ -24,7 +24,11 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 navbar-style">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/home">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/home"
+                >
                   Home
                 </Link>
               </li>
@@ -51,6 +55,9 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link className="nav-link" to="/dashboard">
                   Admin
+                </Link>
+                <Link className="nav-link" to="/add-service">
+                  Add Service
                 </Link>
               </li>
             </ul>
