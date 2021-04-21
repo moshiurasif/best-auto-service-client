@@ -1,41 +1,55 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Sidebar from '../../OrderPage/Sidebar/Sidebar';
-import DashboardSidebar from '../DashboardSidebar/DashboardSidebar';
+import { useEffect } from "react";
+import { useState } from "react";
+import serImg from "../../../images/01-6.jpg";
 
-const OrderList = () => {
-    const [order, setOrder] = useState({});
-    useEffect(()=>{
-        fetch("http://localhost:8000/orders")
-        .then(res=>res.json())
-        .then(data => setOrder(data))
-    },[])
-    return (
-      <section className="order-list">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-4">
-              <Sidebar></Sidebar>
-            </div>
-            <div className="col-md-8">
+const OrderList = ({order}) => {
+   const [orders, setOrders] = useState([]);
+   useEffect(() => {
+     fetch("http://localhost:8000/orders")
+       .then((res) => res.json())
+       .then((data) => setOrders(data));
+   }, []);
+   console.log(orders);
+  return (
+    <section className="order-list">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-4">
+            <Sidebar></Sidebar>
+          </div>
+          <div className="col-md-8">
+            {orders.map((order) => (
               <div className="service-style">
                 <div className="icon-style">
-                  <img
-                    src=""
-                    alt=""
-                  />
+                  {order.service.image ? (
+                    <img
+                      className="img-fluid"
+                      style={{ width: "100px", marginTop: "25px" }}
+                      src={`data:image/png;base64,${order.service.image.img}`}
+                      alt=""
+                    />
+                  ) : (
+                    <img
+                      className="img-fluid"
+                      style={{ width: "100px", marginTop: "25px" }}
+                      src={serImg}
+                    />
+                  )}
                 </div>
                 <div className="service-content">
-                  <h3>serviceName</h3>
-                  <p>description</p>
-                  <h3>$price</h3>
-                    
+                  <h3>{order.service.serviceName}</h3>
+                  <p>{order.service.description}</p>
+                  <h3>{order.service.price}</h3>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
-      </section>
-    );
+      </div>
+    </section>
+  );
 };
 
 export default OrderList;

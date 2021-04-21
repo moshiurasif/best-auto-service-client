@@ -6,7 +6,7 @@ const DashboardSidebar = () => {
       <div className="side-bar">
         <ul>
           <li>
-            <Link to="/">User Dashboard</Link>
+            <Link to="/user-dashboard">User Dashboard</Link>
           </li>
           <li>
             <Link to="/home">home</Link>

@@ -1,39 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Service from './Service/Service';
 import "./Services.css";
-import { faCogs, faTools, faCarCrash, faPumpSoap } from "@fortawesome/free-solid-svg-icons";
-
-
-const servicesData = [
-  {
-    id: "1",
-    serviceName: "Auto Engine Servicing",
-    description: "Sed ut perspicia undniste natus volupta accus",
-    icon: faCogs,
-    price: 499,
-  },
-  {
-    id: "2",
-    serviceName: "Diagnostic Tests",
-    description: "Sed ut perspicia undniste natus volupta accus",
-    icon: faTools,
-    price: 799,
-  },
-  {
-    id: "3",
-    serviceName: "Interior Cleaning",
-    description: "Sed ut perspicia undniste natus volupta accus",
-    icon: faCarCrash,
-    price: 500,
-  },
-  {
-    id: "4",
-    serviceName: "Vaccume Cleaning",
-    description: "Sed ut perspicia undniste natus volupta accus",
-    icon: faPumpSoap,
-    price: 296,
-  },
-];
 
 
 const Services = () => {
@@ -66,8 +33,6 @@ const Services = () => {
           {services.map((serve) => (
             <Service serve={serve} key={serve._id}></Service>
           ))}
-
-          {/* {servicesData.map(serve => <Service serve={serve}></Service>)} */}
         </div>
       </section>
     );

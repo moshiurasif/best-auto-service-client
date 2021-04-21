@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./Service.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useHistory } from 'react-router';
+import serImg from "../../../../images/02-3.png";
 
 const Service = ({serve}) => {
   const [order, setOrder]= useState({});
@@ -28,8 +28,20 @@ const Service = ({serve}) => {
       <div className="col-md-6 col-12">
         <div className="service-style">
           <div className="icon-style">
-            <FontAwesomeIcon icon={serve.icon} />
-            <img src={`http://localhost:8000/${serve.image.img}`} alt="" />
+            {serve.image ? (
+              <img
+                className="img-fluid"
+                style={{ width: "100px", marginTop: "25px" }}
+                src={`data:image/png;base64,${serve.image.img}`}
+                alt=""
+              />
+            ) : (
+              <img
+                className="img-fluid"
+                style={{ width: "100px", marginTop: "25px" }}
+                src={serImg}
+              />
+            )}
           </div>
           <div className="service-content">
             <h3>{serve.serviceName}</h3>

@@ -13,13 +13,13 @@ const Sidebar = () => {
             <Link to="/home">Home</Link>
           </li>
           <li>
-            <Link to="/book">Book</Link>
+            <Link to="/order">Order</Link>
           </li>
           <li>
             <Link to="/order-list">Order List</Link>
           </li>
           <li>
-            <Link to="/review">Review</Link>
+            <Link to="/review">Add Review</Link>
           </li>
         </ul>
       </div>
