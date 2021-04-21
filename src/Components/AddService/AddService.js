@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import DashboardSidebar from '../Dashboard/DashboardSidebar/DashboardSidebar';
+import Sidebar from '../OrderPage/Sidebar/Sidebar';
 
 const AddService = () => {
        const [info, setInfo] = useState({});
@@ -40,7 +41,7 @@ const AddService = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-4">
-              <DashboardSidebar></DashboardSidebar>
+              <Sidebar></Sidebar>
             </div>
             <div className="col-md-8">
               <h3>Add A Service</h3>

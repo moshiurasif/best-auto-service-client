@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import Sidebar from '../../OrderPage/Sidebar/Sidebar';
 import DashboardSidebar from '../DashboardSidebar/DashboardSidebar';
 
 const AdminOrderList = () => {
@@ -15,7 +16,7 @@ const AdminOrderList = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-4">
-              <DashboardSidebar></DashboardSidebar>
+              <Sidebar></Sidebar>
             </div>
             <div className="col-md-8">
               <table className="table table-borderless">

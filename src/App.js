@@ -9,7 +9,6 @@ import OrderPage from "./Components/OrderPage/OrderPage";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import NotFound from "./Components/NotFound/NotFound";
 import AddReview from "./Components/AddReview/AddReview";
-import Dashboard from "./Components/Dashboard/Dashboard";
 import AddService from "./Components/AddService/AddService";
 import OrderList from "./Components/Dashboard/OrderLlist/OrderList";
 import AdminOrderList from "./Components/Dashboard/AdminOrderList/AdminOrderList";
@@ -53,9 +52,6 @@ function App() {
           <Route path="/manage-service">
             <ManageService></ManageService>
           </Route>
-          <PrivateRoute path="/dashboard">
-            <Dashboard></Dashboard>
-          </PrivateRoute>
           <PrivateRoute path="/user-dashboard">
             <UserDashboard></UserDashboard>
           </PrivateRoute>
