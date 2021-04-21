@@ -12,3 +12,6 @@
 .nav-link:hover{
     color:navy;
 }
+.navbar-background{
+    background: linear-gradient(rgba(84, 160, 255, 0.8), rgba(1, 163, 164, 0.8));
+}

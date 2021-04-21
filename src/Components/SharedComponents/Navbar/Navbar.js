@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-      <nav className="navbar navbar-expand-lg">
+      <nav className="navbar navbar-expand-lg navbar-background">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/home">
             <img className="img-fluid w-50" src={logo} alt="Gerez" />
