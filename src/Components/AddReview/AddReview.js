@@ -23,7 +23,7 @@ const AddReview = () => {
       formData.append('companyName', info.companyName);
       formData.append('customerOpinion', info.customerOpinion);
 
-      fetch('http://localhost:8000/addReview', {
+      fetch('https://whispering-springs-55108.herokuapp.com/addReview', {
           method: 'POST',
           body: formData
       })

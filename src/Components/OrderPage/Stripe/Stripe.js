@@ -151,7 +151,7 @@ const CheckoutForm = ({ service }) => {
     }
     console.log(service, payload.paymentMethod);
     const order = {...loggedInUser, service:service, payment: payload.paymentMethod, status: "pending", date: new Date()}
-    fetch("http://localhost:8000/addOrder", {
+    fetch("https://whispering-springs-55108.herokuapp.com/addOrder", {
       method: "Post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(order),

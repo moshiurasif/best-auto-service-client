@@ -7,7 +7,7 @@ import serImg from "../../../images/01-6.jpg";
 const OrderList = ({order}) => {
    const [orders, setOrders] = useState([]);
    useEffect(() => {
-     fetch("http://localhost:8000/orders")
+     fetch("https://whispering-springs-55108.herokuapp.com/orders")
        .then((res) => res.json())
        .then((data) => setOrders(data));
    }, []);

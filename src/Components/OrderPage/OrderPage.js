@@ -9,7 +9,7 @@ const OrderPage = () => {
     const {id} = useParams();
     
     useEffect(()=>{
-        fetch(`http://localhost:8000/singleService`, {
+        fetch(`https://whispering-springs-55108.herokuapp.com/singleService`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({id: id})

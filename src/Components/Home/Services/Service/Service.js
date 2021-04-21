@@ -11,7 +11,7 @@ const Service = ({serve}) => {
     history.push(`/book/${serve._id}`);
   };
   // useEffect(()=>{
-  //   fetch("http://localhost:8000/addOrder", {
+  //   fetch("https://whispering-springs-55108.herokuapp.com/addOrder", {
   //     method: "Post",
   //     headers: { "Content-Type": "application/json" },
   //     body: JSON.stringify(order)

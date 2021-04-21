@@ -6,7 +6,7 @@ import DashboardSidebar from '../DashboardSidebar/DashboardSidebar';
 const AdminOrderList = () => {
       const [orders, setOrders] = useState([]);
       useEffect(() => {
-        fetch("http://localhost:8000/orders")
+        fetch("https://whispering-springs-55108.herokuapp.com/orders")
           .then((res) => res.json())
           .then((data) => setOrders(data));
       }, []);

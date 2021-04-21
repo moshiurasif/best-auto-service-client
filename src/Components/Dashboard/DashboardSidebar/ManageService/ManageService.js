@@ -6,7 +6,7 @@ import DashboardSidebar from '../DashboardSidebar';
 const ManageService = () => {
     // const [services, setServices] = useState([]);
     // useEffect(() =>{
-    //     fetch("http://localhost:8000/services")
+    //     fetch("https://whispering-springs-55108.herokuapp.com/services")
     //     .then(res=>res.json)
     //     .then(data => setServices(data))
     // },[])
